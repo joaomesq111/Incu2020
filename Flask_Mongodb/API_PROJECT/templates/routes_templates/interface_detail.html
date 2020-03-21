@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='table.css') }}">
+    <title>Interface details from {{ interface_name }}</title>
+</head>
+<body>
+    <h3>Switch : {{ switch_name }}</h3>
+    <h3>Interface : {{ interface_name }}</h3>
+     <table style="width:100%">
+  <tr>
+    <th>Description</th>
+    <th>state</th>
+  </tr>
+  <tr>
+    <td>{{ interface_details['Description'] }}</td>
+    <td>{{ interface_details['state'] }}</td>
+  </tr>
+</table>
+</body>
+</html>

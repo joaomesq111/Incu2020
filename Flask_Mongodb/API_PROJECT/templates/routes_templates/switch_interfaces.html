@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='table.css') }}">
+    <title>Interfaces from switch {{ switch_name }}</title>
+</head>
+<body>
+    <h3>Switch : {{ switch_name }}</h3>
+     <table style="width:100%">
+  <tr>
+    <th>Interface name</th>
+    <th>Description</th>
+    <th>state</th>
+  </tr>
+    {% for int in interfaces %}
+  <tr>
+    <td>{{ int['Interface name'] }}</td>
+    <td>{{ int['Description'] }}</td>
+    <td>{{ int['state'] }}</td>
+  </tr>
+  {% endfor %}
+</table>
+</body>
+</html>
